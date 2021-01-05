@@ -1,5 +1,6 @@
 # i ll be writting code for basic implementation of
 # single list , you can apply this basic structure for solving LL problems
+
 class Node:
     def __init__(self, data):  # initialization of class , it takes data as parameter
         self.data = data
@@ -7,7 +8,7 @@ class Node:
 
 
 class List:
-    def __init__(self): # initialization
+    def __init__(self):  # initialization
         self.head = None  # reset the head = None when new list is created
 
     def insert(self, data):
@@ -26,9 +27,9 @@ class List:
                 current = current.next
 
 
-def main(): # this is a main function
-    A = List() # 'A' is new object of our List class i.e it is a new Linked list
-    A.insert(10) # Apply any functions on list that you created
+def main():  # this is a main function
+    A = List()  # 'A' is new object of our List class i.e it is a new Linked list
+    A.insert(10)  # Apply any functions on list that you created
     A.insert(12)
     A.insert(13)
     A.insert(15)

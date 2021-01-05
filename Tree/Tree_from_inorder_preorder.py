@@ -11,7 +11,7 @@ def buildTree(inOrder, preOrder, inStart, inEnd):
     tNode = Node(preOrder[buildTree.preIndex])
     buildTree.preIndex += 1
 
-    if inStart == inEnd:
+    if inStart == inEnd: #important case
         return tNode
     inIndex = Search(inOrder, inStart, inEnd, tNode.data)
 
@@ -41,6 +41,8 @@ def printLevel(root):
                 queue.append(node.left)
             if node.right is not None:
                 queue.append(node.right)
+
+
 def printInorder(root):
     if root is None:
         return
@@ -49,12 +51,10 @@ def printInorder(root):
     printInorder(root.right)
 
 
-
-
 inOrder = ['D', 'B', 'E', 'A', 'F', 'C']
 preOrder = ['A', 'B', 'D', 'E', 'C', 'F']
 buildTree.preIndex = 0
-root = buildTree(inOrder,preOrder,0,len(inOrder)-1)
+root = buildTree(inOrder, preOrder, 0, len(inOrder) - 1)
 print("Level Order Traversal of Tree is:")
 printLevel(root)
 print("Inorder traversal of Tree is:")

@@ -29,7 +29,7 @@ class List:
             first = first.next
             second = second.next
         prev.next = first.next
-        del(first)
+        del first
 
     def printList(self):
         if self.head is None:
